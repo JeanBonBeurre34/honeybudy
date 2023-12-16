@@ -5,7 +5,7 @@ FROM python:3.9-slim
 WORKDIR /usr/src/app
 
 # Copy the current directory contents into the container at /usr/src/app
-COPY honeypot.py .
+COPY givemethehoney.py .
 
 # Make port 2222 available to the world outside this container
 EXPOSE 2222
