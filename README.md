@@ -18,16 +18,22 @@ git clone https://github.com/JeanBonBeurre34/honeybudy
 ```
 
 
-## Building the Docker Image
+### Building the Docker Image
 
 To build the Docker image, run the following command in the project directory:
 
 ```bash
 docker build -t my-honeypot .
 ```
-
 This command builds a Docker image named my-honeypot based on the Dockerfile in your current directory.
-Running the Docker Container
+
+To build the docker image from docker hub directly:
+```bash
+docker pull reg0l1/givemethehoney:latest
+```
+The docker image will be pull directly from docker hub and store localy.
+
+### Running the Docker Container
 
 Once the image is built, you can run the Docker container using:
 
@@ -37,7 +43,7 @@ docker run -p 2222:2222 my-honeypot
 
 This command starts a container instance of your honeypot. It forwards port 2222 from your host machine to port 2222 in the Docker container, where the honeypot application is listening.
 
-## Interacting with the Honeypot
+### Interacting with the Honeypot
 
 You can interact with the honeypot by connecting to port 2222 on your localhost. For example, using a tool like telnet or netcat, you can connect via:
 
